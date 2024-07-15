@@ -1,0 +1,161 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mullish', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #D8B4FE; /* Purple background */
+}
+
+.navbar-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.logo {
+    padding-right: 48px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.nav-item {
+    font-weight: 500;
+    position: relative;
+    transition: all 0.15s ease;
+    padding: 16px 8px;
+    background-color: rgba(136, 19, 55, 0); /* Transparent background */
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    color: #DB2777; /* Pink text on hover */
+    background-color: rgba(136, 19, 55, 0.1); /* Light pink background on hover */
+}
+
+.nav-item a {
+    display: block;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #DB2777; /* Pink underline */
+    transition: all 0.15s ease;
+    display: none;
+}
+
+.nav-item:hover .underline {
+    display: block;
+}
+
+/* Flag and button styles */
+.flag {
+    padding: 20px 12px;
+}
+
+.contact {
+    display: flex;
+    gap: 6px;
+    padding: 12px;
+}
+
+.contact button {
+    padding: 4px 12px;
+    font-family: 'Mullish', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 4px;
+    font-weight: 300;
+    transition: all 0.15s ease;
+}
+
+.contact button:hover {
+    background-color: #333;
+}
+
+/* Section styles */
+.hero {
+    position: relative;
+    background-color: #E9D5FF; /* Light purple background */
+    height: 100vh;
+}
+
+.hero-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 320px;
+    margin-right: 80px;
+}
+
+.welcome-text {
+    color: #DB2777; /* Pink text */
+    font-family: 'Mullish', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.hero-title {
+    color: #000;
+    font-family: 'Mullish', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.hero-title .highlight {
+    color: #DB2777; /* Pink text */
+}
+
+.description {
+    font-family: 'Mullish', sans-serif;
+}
+
+.hero-image {
+    max-width: 340px;
+    border-radius: 8px;
+    margin-right: 80px;
+    margin-top: 160px;
+}
