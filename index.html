@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="bg-blue-800 fixed w-full z-10">
+    <nav class="bg-purple-300 fixed w-full z-10">
         <div class="relative w-full md:w-[1080px] mx-auto flex flex-col md:flex-row items-center">
             <!-- Logo -->
             <a href="index.html" class="py-4 pr-48 cursor-pointer">
@@ -27,8 +27,8 @@
 
             <!-- Navigation Links for Desktop -->
             <ul class="hidden md:flex flex-col md:flex-row flex-wrap justify-center gap-2" id="navbar">
-                <li class="font-medium  hover:text-blue-800 py-4 px-2 bg-blue-950 bg-opacity-0 hover:bg-opacity-10 cursor-pointer transition-all duration-150 group relative">
-                    <a href="#" class="py-4">Home</a>
+                <li class="font-medium  hover:text-pink-800 py-4 px-2 bg-pink-950 bg-opacity-0 hover:bg-opacity-10 cursor-pointer transition-all duration-150 group relative">
+                    <a href="#home"  class="py-4">Home</a>
                     <div class="absolute bottom-0 left-0 h-1 w-full bg-pink-800 hidden group-hover:block transition-all duration-150"></div>
                 </li>
 
@@ -58,24 +58,24 @@
     </nav>
 
     <!-- Hero Section for Desktop -->
-    <section class="relative bg-purple-200 h-screen hidden md:flex">
+    <section id="home" class="relative bg-purple-200 h-screen hidden md:flex">
         <div class="max-w-[1080px] flex items-center mx-auto hero-content">
-            <div class="max-w-[1080px] flex flex-col gap-4 mt-80 mr-20">
+            <div id="dekhero" class="max-w-[1080px] flex flex-col gap-4 mt-80 mr-20">
                 <p class="text-pink-800 text-2xl font-bold animate-slideInSlightly">Hello, Welcome</p>
                 <!-- <h1 class="text-black leading-[1.2] font-bold text-[40px]">I am <span id="mehul" class="text-black">Mehul</span> <span class="text-pink-800">Ra</span>ul</h1> -->
                 <h1 id="animated-text" class="text-black leading-[1.2] font-bold text-[40px]"></h1>
                 <p class="text-xl">I'm a web developer who loves to create functional websites. Currently I'm a student at Ajeenkya DY Patil University, where I'm pursuing my Bachelors Degree in Artificial Intelligence and Data Science Engineering and learning DSA and AI with Web-Development.</p>
                 <div class="flex items-center">
                 <strong class="mr-2 text-lg">Connect with me on LinkedIn</strong>
-                <a class="flex items-center " href="https://www.linkedin.com/in/mehul-raul-494025302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img class="transform transition-transform duration-300 hover:scale-125" src="icons8-linkedin-48.png" alt="LinkedIn"></a>
+                <a class="flex items-center " href="https://www.linkedin.com/in/mehul-raul-494025302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img id="linkimg" class="transform transition-transform duration-300 hover:scale-125" src="icons8-linkedin-48.png" alt="LinkedIn"></a>
             </div>
         </div>
-            <img src="shot2.png" class="max-w-[340px] rounded-md mr-20 mt-40" alt="Profile Shot">
+            <img src="shot2.png" id="mypho" class="max-w-[340px] mr-20 mt-40" alt="Profile Shot">
         </div>
     </section>
 
     <!-- Hero Section for Mobile -->
-    <section class="relative bg-purple-200 h-screen flex md:hidden">
+    <section id="home" class="relative bg-purple-200 h-screen flex md:hidden">
         <div class="max-w-[1080px] flex flex-col items-center mx-auto hero-content">
             <div class="max-w-[1080px] flex flex-col gap-4 mt-20 px-4">
                 <p class="text-pink-800 text-2xl font-mullish font-bold animate-slideInSlightly">Hello, Welcome</p>
@@ -84,10 +84,10 @@
                 <p>I'm a web developer who loves to create functional websites. Currently I'm a student at Ajeenkya DY Patil University, where I'm pursuing my Bachelors Degree in Artificial Intelligence and Data Science Engineering and learning DSA and AI with Web-Development.</p>
                 <div class="flex items-center">
                     <strong class="mr-2 text-lg">Connect with me on LinkedIn</strong>
-                    <a class="flex items-center " href="https://www.linkedin.com/in/mehul-raul-494025302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img class="transform transition-transform duration-300 hover:scale-125" src="icons8-linkedin-48.png" alt="LinkedIn"></a>
+                    <a class="flex items-center " href="https://www.linkedin.com/in/mehul-raul-494025302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img id="linkimg1" class="transform transition-transform duration-300 hover:scale-125" src="icons8-linkedin-48.png" alt="LinkedIn"></a>
                 </div>
             </div>
-            <img src="shot2.png" class="max-w-[200px] rounded-md mt-10" alt="Profile Shot">
+            <img id="myphomob" src="shot2.png" class="max-w-[200px] rounded-full mt-10" alt="Profile Shot">
         </div>
     </section>
 
@@ -95,12 +95,15 @@
     <section id="about" class="relative bg-purple-200 h-screen">
         <div class="max-w-[1080px] flex items-center flex-col mx-auto pt-40 px-4">
             <h2 class="heading text-black font-mullish leading-[1.2] font-bold text-[32px]">About Me</h2>
-            <p class="text-base">
+            <div id="bgs">
+            <p class="mt-10 font-bold text-xl">
                 Hello, welcome to my profile! I'm Mehul Raul, a passionate web developer who thrives on mastering new technologies. This website serves as my personal portfolio, showcasing my projects and skills in web development.
             </p>
-            <p class="text-base">
+            <br>
+            <p class="text-xl">
                 Connect with me on LinkedIn and other platforms for more updates on my projects and to join me on this exciting journey of continuous learning and growth in web development. Your thoughts and feedback mean a lot to me, so please don't hesitate to reach out. Let's connect and innovate together!
             </p>
+        </div>
         </div>
     </section>
 
@@ -109,23 +112,25 @@
         <div class="max-w-[1080px] flex items-center flex-col mx-auto pt-40 px-4">
             <h2 class="heading text-black font-mullish leading-[1.2] font-bold text-[32px]">Education</h2>
             <ul class="text-base mt-6">
+                <div id="edu">
                 <li>
-                    <span class="font-mullish text-black">Bachelor's degree in Artificial Intelligence and Data Science Engineering at Ajeenkya DY Patil University.</span>
-                    <ul class="ml-4">
+                    <span class="font-mullish text-xl text-black">Currently pursuing Bachelor's degree in Artificial Intelligence and Data Science Engineering at Ajeenkya DY Patil University.</span>
+                    <ul class="text-xl">
                         <li>Studying courses in Data Structures and Algorithms (DSA) and Artificial Intelligence (AI).</li>
                         <li>Completed projects in machine learning and web development using Python and JavaScript.</li>
                     </ul>
                 </li>
-                <li class="mt-4">
+                <li class="mt-4 text-xl">
                     <span class="font-mullish text-black">High School: Kamalnayan Bajaj High School, Pune</span>
                 </li>
-                <li class="mt-4">
+                <li class="mt-4 text-xl ">
                     <span class="font-mullish text-black">Secondary Education: Beacon High School, Pune</span>
-                    <ul class="ml-4">
+                    <ul class="text-xl">
                         <li>Achieved academic success with a strong foundation in various subjects.</li>
                         <li>Participated in sports and cultural activities.</li>
                     </ul>
                 </li>
+            </div>
             </ul>
         </div>
     </section>
@@ -134,15 +139,23 @@
     <section id="skills" class="relative bg-purple-200 h-screen">
         <div class="max-w-[1080px] flex items-center flex-col mx-auto pt-40 px-4">
             <h2 class="heading text-black font-mullish leading-[1.2] font-bold text-[32px]">Skills</h2>
-            <p class="text-base">
+            <p class="text-2xl font-bold mt-10">
                 Here are some of the skills I have acquired and continue to develop:
             </p>
-            <ul class="text-base mt-6">
-                <li>Web Development: HTML, CSS, JavaScript, React</li>
-                <li>Programming Languages: Python, Java, JavaScript</li>
-                <li>Data Science: Machine Learning, Data Analysis</li>
-                <li>Tools & Technologies: Git, GitHub, VS Code, Jupyter Notebooks</li>
+            <div class="backg">
+            <ul id="skilis" class="text-base text-xl mt-6">
+                <li class="skiliele">Web Development: HTML, CSS, JavaScript, React</li>
+                <li class="skiliele">Programming Languages: Python, Java, JavaScript</li>
+                <li class="skiliele">Data Science: Machine Learning, Data Analysis</li>
+                <li class="skiliele">Tools & Technologies: Git, GitHub, VS Code</li>
             </ul>
+            </div>
+            <img src="html-48.png" class="skill-icon skill-icon-2">
+            <img src="css-48.png" class="skill-icon skill-icon-1">
+            <img src="javascript-48.png" class="skill-icon skill-icon-3">
+            <img src="code-48.png" class="skill-icon skill-icon-4">
+            <img src="python-48.png" class="skill-icon skill-icon-5">
+            <img src="c-48.png" class="skill-icon skill-icon-6">
         </div>
     </section>
 
@@ -210,6 +223,74 @@
     type();
 });
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const icons = document.querySelectorAll('.skill-icon');
+    let iconsAnimated = false; // Flag to check if icons have been animated
+
+    // Function to animate icons to original positions
+    function animateIcons() {
+        icons.forEach((icon, index) => {
+            // Set initial arbitrary positions
+            icon.style.transform = `translate(${Math.random() * 400 - 200}px, ${Math.random() * 400 - 200}px)`;
+
+            // Animate to original positions
+            setTimeout(() => {
+                icon.style.opacity = '1';
+                icon.style.transform = `translate(0, 0) rotate(${getRotationValue(icon)}deg)`;
+            }, index * 200); // Delay each icon's animation slightly
+        });
+
+        iconsAnimated = true; // Update flag
+    }
+
+    // Helper function to get current rotation value
+    function getRotationValue(icon) {
+        const transformValue = icon.style.transform;
+        if (transformValue.includes('rotate(')) {
+            return parseFloat(transformValue.split('rotate(')[1].split('deg)')[0]);
+        }
+        return 0;
+    }
+
+    // Call the animation function when navigating to skills section
+    const skillsLink = document.querySelector('a[href="#skills"]');
+    skillsLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        if (!iconsAnimated) {
+            animateIcons(); // Trigger animation only if icons haven't been animated
+        }
+        // Scroll to the skills section
+        const skillsSection = document.getElementById('skills');
+        skillsSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Check if skills section is in viewport on scroll
+    function checkSkillsSectionInView() {
+        const skillsSection = document.getElementById('skills');
+        const skillsSectionRect = skillsSection.getBoundingClientRect();
+
+        // Check if skills section is in viewport
+        if (skillsSectionRect.top < window.innerHeight && skillsSectionRect.bottom >= 0) {
+            if (!iconsAnimated) {
+                animateIcons(); // Trigger animation if icons haven't been animated and section is in view
+            }
+            // Remove event listener once animation triggered
+            window.removeEventListener('scroll', checkSkillsSectionInView);
+        }
+    }
+
+    // Add event listener to check skills section visibility on scroll
+    window.addEventListener('scroll', checkSkillsSectionInView);
+
+    // On page load, check if already in skills section and animate icons
+    if (window.location.hash === '#skills') {
+        animateIcons();
+    }
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const text = "I am Mehul Raul";
     const animatedTextMobile = document.getElementById('animated-text-mobile');
@@ -230,6 +311,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     type();
 });
+
+
+//  document.addEventListener('scroll', function() {
+//              const scrollPosition = window.scrollY;
+//              const icons = document.querySelectorAll('.skill-icon');
+
+//              icons.forEach((icon, index) => {
+//                const speed = (index + 1) * 0.05;
+//                  icon.style.transform = `translateY(${scrollPosition * speed}px) rotate(${index % 2 === 0 ? scrollPosition * speed : -scrollPosition * speed}deg)`;
+//              });
+//         });
 
 document.addEventListener('DOMContentLoaded', function() {
         const contactForm = document.getElementById('contactForm');
@@ -266,7 +358,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
 
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
 
 
