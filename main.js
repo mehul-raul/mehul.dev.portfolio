@@ -101,27 +101,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+//name text for mobile
+document.addEventListener('DOMContentLoaded', () => {
+    const text = "I am Mehul Raul";
+    const animatedTextMobile = document.getElementById('animated-text-mobile');
+    let index = 0;
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const text = "I am Mehul Raul";
-//     const animatedTextMobile = document.getElementById('animated-text-mobile');
-//     let index = 0;
+    function type() {
+        if (index < text.length) {
+            if (text.slice(index, index + 2) === "Ra") {
+                animatedTextMobile.innerHTML += `<span class="text-pink-800">Ra</span>`;
+                index += 2;
+            } else {
+                animatedTextMobile.innerHTML += text.charAt(index);
+                index++;
+            }
+            setTimeout(type, 100);
+        }
+    }
 
-//     function type() {
-//         if (index < text.length) {
-//             if (text.slice(index, index + 2) === "Ra") {
-//                 animatedTextMobile.innerHTML += `<span class="text-pink-800">Ra</span>`;
-//                 index += 2;
-//             } else {
-//                 animatedTextMobile.innerHTML += text.charAt(index);
-//                 index++;
-//             }
-//             setTimeout(type, 100);
-//         }
-//     }
-
-//     type();
-// });
+    type();
+});
 
 
 //  document.addEventListener('scroll', function() {
