@@ -101,98 +101,91 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//name text for mobile
-document.addEventListener('DOMContentLoaded', () => {
-    const text = "I am Mehul Raul";
-    const animatedTextMobile = document.getElementById('animated-text-mobile');
-    let index = 0;
+//TYPE TEXT FOR MOBILE
+ document.addEventListener('DOMContentLoaded', () => {
+     const text = "I am Mehul Raul";
+     const animatedTextMobile = document.getElementById('animated-text-mobile');
+     let index = 0;
 
     function type() {
-        if (index < text.length) {
-            if (text.slice(index, index + 2) === "Ra") {
-                animatedTextMobile.innerHTML += `<span class="text-pink-800">Ra</span>`;
-                index += 2;
-            } else {
-                animatedTextMobile.innerHTML += text.charAt(index);
-                index++;
-            }
-            setTimeout(type, 100);
+         if (index < text.length) {
+             if (text.slice(index, index + 2) === "Ra") {
+                 animatedTextMobile.innerHTML += `<span class="text-pink-800">Ra</span>`;
+                 index += 2;
+             } else {
+                 animatedTextMobile.innerHTML += text.charAt(index);
+                 index++;
+             }
+             setTimeout(type, 100);
         }
-    }
+     }
 
-    type();
-});
-
-
-//  document.addEventListener('scroll', function() {
-//              const scrollPosition = window.scrollY;
-//              const icons = document.querySelectorAll('.skill-icon');
-
-//              icons.forEach((icon, index) => {
-//                const speed = (index + 1) * 0.05;
-//                  icon.style.transform = `translateY(${scrollPosition * speed}px) rotate(${index % 2 === 0 ? scrollPosition * speed : -scrollPosition * speed}deg)`;
-//              });         });
+     type();
+ });
 
 
-//  document.getElementById('contactForm').addEventListener('submit', function(event) {     event.preventDefault();
+//form js work
+ const form = document.getElementById('contactForm');
+ const result = document.getElementById('submitBtn');
+ form.addEventListener('submit', function(e) {
+     e.preventDefault();
+     const formData = new FormData(form);
+     const object = Object.fromEntries(formData);
+     const json = JSON.stringify(object);
 
-//      // Get form values
-//      var fullName = document.getElementById('fullName').value;
-//      var emailAddress = document.getElementById('emailAddress').value;
-//      var mobileNumber = document.getElementById('mobileNumber').value;
+     // Change button text to "Please wait..."
+     result.innerHTML = "Please wait...";
+     result.disabled = true; // Disable the button to prevent multiple submissions
 
-//      // Prepare the email template parameters
-//      var templateParams = {
-//          fullName: fullName,
-//          emailAddress: emailAddress,
-//          mobileNumber: mobileNumber
-//      };
+     fetch('https://api.web3forms.com/submit', {
+         method: 'POST',
+         headers: {
+             'Content-Type': 'application/json',
+             'Accept': 'application/json'
+         },
+         body: json
+     })
+     .then(async (response) => {
+         let json = await response.json();
+         if (response.status == 200) {
+             result.innerHTML = "Form submitted successfully";
+         } else {
+             console.log(response);
+             result.innerHTML = json.message;
+         }
+     })
+     .catch(error => {
+         console.log(error);
+         result.innerHTML = "Something went wrong!";
+     })
+     .finally(() => {
+         // Reset button state after 3 seconds
+         setTimeout(() => {
+             result.innerHTML = "Submit";                   
+             result.disabled = false; // Re-enable the button
+         }, 1000);
+     });
+ });
+  document.addEventListener('DOMContentLoaded', function() {
+          const contactForm = document.getElementById('contactForm');
+         const fullNameInput = document.getElementById('fullName');
+         const emailAddressInput = document.getElementById('emailAddress');
+         const mobileNumberInput = document.getElementById('mobileNumber');
 
-//     // Send the email
-//      emailjs.send('Yservice_h0ikp5i', 'template_3und7n1', templateParams)
-//          .then(function(response) {
-//              console.log('SUCCESS!', response.status, response.text);
-//             alert('Your message has been sent successfully!');
-//         }, function(error) {
-//             console.log('FAILED...', error);
-//              alert('There was an error sending your message. Please try again later.');
-//         });
-//  });
-
- document.addEventListener('DOMContentLoaded', function() {
-         const contactForm = document.getElementById('contactForm');
-        const fullNameInput = document.getElementById('fullName');
-        const emailAddressInput = document.getElementById('emailAddress');
-        const mobileNumberInput = document.getElementById('mobileNumber');
-
-        contactForm.addEventListener('submit', function(event) {
-           event.preventDefault(); // Prevent default form submission
-
-           // Validate form inputs (simple example)
-           if (fullNameInput.value.trim() === '' || emailAddressInput.value.trim() === '' || mobileNumberInput.value.trim() === '') {
-               alert('Please fill in all fields.');
-              return;
-           }
-
-          // Form data object
-            const formData = {
-                fullName: fullNameInput.value.trim(),
-                emailAddress: emailAddressInput.value.trim(),
-               mobileNumber: mobileNumberInput.value.trim()
-            };
-
-           // Example: Send form data to backend or perform other actions
-            console.log(formData); // Replace with your form handling logic
-
-           // Optionally, clear form inputs after submission
-           fullNameInput.value = '';
-           emailAddressInput.value = '';
-           mobileNumberInput.value = '';
-
-            // Show success message or redirect to a thank you page
-         alert('Form submitted successfully!');
-        });
+         contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // Optionally, clear form inputs after submission
+            fullNameInput.value = '';
+            emailAddressInput.value = '';
+            mobileNumberInput.value = '';
+        
+         });
     });
+//ends here
+
+
+
+
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
