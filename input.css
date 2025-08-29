@@ -39,6 +39,16 @@ body {
     color: #0099ff
 }
 
+#proj1:hover {
+  background-color: #3333cc; /* Change background color */  
+}
+#proj2:hover {
+  background-color: #3333cc; /* Change background color */    
+}
+#proj3:hover {
+  background-color: #3333cc; /* Change background color */   
+}
+
 
 /* #skilis{
     margin: 4rem;
@@ -111,7 +121,7 @@ body {
         margin: 4rem;
         background-color: white;
         border-radius: 50px;
-        height: 30rem;
+        height: 35rem;
         padding-left: 4rem;
         padding-right: 4rem;
         padding-top: 4rem;
