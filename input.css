@@ -206,6 +206,25 @@ body {
 
 /* Media query for iPhone 12 (adjust as needed) */
 @media only screen and (max-width: 844px) {
+      #bgs{
+        margin: 4rem;
+        background-color: white;
+        border-radius: 50px;
+        height: 40rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 4rem;
+    }
+    #edu{
+        margin: 4rem;
+        background-color: white;
+        border-radius: 50px;
+        height: 27rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 4rem;
+       
+    }
     /* Adjustments for mobile view */
     #skilis {
         margin: 2rem;
