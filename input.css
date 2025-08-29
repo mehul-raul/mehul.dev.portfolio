@@ -290,17 +290,5 @@ body {
         transform: none;
     }
 
-    /* Reset specific icon positions for mobile */
-    .skill-icon-1,
-    .skill-icon-2,
-    .skill-icon-3,
-    .skill-icon-4,
-    .skill-icon-5,
-    .skill-icon-6 {
-        top: auto;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        transform: none;
-    }
+
 }
