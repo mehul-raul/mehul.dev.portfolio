@@ -39,14 +39,18 @@ body {
     color: #0099ff
 }
 
+
+
 #proj1:hover {
-    color: #3333cc; /* Change background color */  
+    color: #3333cc; /* Change text color */  
 }
+
 #proj2:hover {
-    color: #3333cc; /* Change background color */    
+    color: #3333cc; /* Change text color */    
 }
+
 #proj3:hover {
-    color: #3333cc; /* Change background color */   
+    color: #3333cc; /* Change text color */   
 }
 
 
@@ -121,10 +125,11 @@ body {
         margin: 4rem;
         background-color: white;
         border-radius: 50px;
-        height: 45rem;
+        height: 50rem;
         padding-left: 4rem;
         padding-right: 4rem;
         padding-top: 4rem;
+        padding-bottom: 4rem;
     }
     #edu{
         margin: 4rem;
