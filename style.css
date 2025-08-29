@@ -195,8 +195,18 @@ body {
 /* About Section */
 .about-section {
     padding: 40px 20px;
-    height: 100vh;
+    height: 130vh;
     background-color: #f9f9f9;
+}
+
+#proj1 {
+    color: #0099ff
+}
+#proj2 {
+    color: #0099ff
+}
+#proj3 {
+    color: #0099ff
 }
 
 .section-content {
