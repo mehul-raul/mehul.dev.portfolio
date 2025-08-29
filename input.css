@@ -140,11 +140,70 @@ body {
         padding-top: 4rem;
        
     }
+    #skilis {
+    margin: 4rem;
+    }
+    
+    .skiliele {
+        margin: 2rem;
+        color: rgb(157, 23, 77);
+        font-weight: bold;
+    }
+    
+    .backg {
+        margin: 4rem;
+        background-color: white;
+        border-radius: 50px;
+    }
+    
+    .skill-icon {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        opacity: 0;
+    }
+    
+    .skill-icon-1 {
+        top: 30%;
+        left: 25%;
+        transform: rotate(20deg);
+    }
+    
+    .skill-icon-2 {
+        top: 30%;
+        right: 15%;
+        transform: rotate(-15deg);
+    }
+    
+    .skill-icon-3 {
+        bottom: 20%;
+        left: 25%;
+        transform: rotate(10deg);
+    }
+    
+    .skill-icon-4 {
+        bottom: 20%;
+        right: 20%;
+        transform: rotate(-25deg);
+    }
+    
+    .skill-icon-5 {
+        bottom: 10%;
+        right: 45%;
+        transform: rotate(5deg);
+    }
+    
+    .skill-icon-6 {
+        bottom: 50%;
+        left: 10%;
+        transform: rotate(10deg);
+    }
     
 }
 
 
-#skilis {
+/* #skilis {
     margin: 4rem;
 }
 
@@ -202,29 +261,10 @@ body {
     bottom: 50%;
     left: 10%;
     transform: rotate(10deg);
-}
+} */
 
 /* Media query for iPhone 12 (adjust as needed) */
 @media only screen and (max-width: 844px) {
-      #bgs{
-        margin: 4rem;
-        background-color: white;
-        border-radius: 50px;
-        height: 40rem;
-        padding-left: 4rem;
-        padding-right: 4rem;
-        padding-top: 4rem;
-    }
-    #edu{
-        margin: 4rem;
-        background-color: white;
-        border-radius: 50px;
-        height: 27rem;
-        padding-left: 4rem;
-        padding-right: 4rem;
-        padding-top: 4rem;
-       
-    }
     /* Adjustments for mobile view */
     #skilis {
         margin: 2rem;
