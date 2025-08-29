@@ -267,7 +267,7 @@ body {
 @media only screen and (max-width: 844px) {
     /* Adjustments for mobile view */
     #skilis {
-        margin: 2rem;
+        margin: 4rem;
     }
 
     .backg {
@@ -279,15 +279,6 @@ body {
 
     .skiliele {
         margin: 0.5rem;
-    }
-
-    .skill-icon {
-        position: relative;
-        width: 32px;
-        height: 32px;
-        opacity: 1;
-        transition: none;
-        transform: none;
     }
 
 
